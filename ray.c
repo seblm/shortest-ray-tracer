@@ -20,8 +20,14 @@ int main(/*int argc, char *argv[]*/ L, c, b) char**c, **b; {
         B = sphereZ * 50 - sphereY * y - sphereX * x;
         
         (_ = B * B - A * (sphereZ * sphereZ + sphereX * sphereX + sphereY * sphereY - sphereR * sphereR)) > 0
-          && (_ = (B - sqrt(_)) / A, _ < i
-            && (h = (sphereZ - _ * (50 + x + y) - sphereX - sphereY) / sphereR, i = _));
+          && (
+            _ = (B - sqrt(_)) / A,
+            _ < i
+              && (
+                h = (sphereZ - _ * (50 + x + y) - sphereX - sphereY) / sphereR,
+                i = _
+              )
+          );
       }
       putchar("......-:=#@"[(int)(h * 3) + 5]);
     }
