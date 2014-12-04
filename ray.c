@@ -30,5 +30,5 @@ int main(/*int argc, char *argv[]*/ L, c, b) char**c, **b; {
     }
     puts("");
   }
-  return 0;
+  return EXIT_SUCCESS;
 }
